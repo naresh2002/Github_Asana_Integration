@@ -37,13 +37,13 @@ def create_asana_task(issue):
     }
     data = {
         "data": {
-        "workspace": settings.ASANA_WORKSPACE_GID,  # Workspace GID, https://app.asana.com/api/1.0/workspaces
-        "name": issue['title'],
-        "notes": f"Issue Description: {issue['body']}\nTask ID(Issue URL): {issue['html_url']}",
-        "assignee": "me",   # Can only be email, GID or me
-        # "assignee": issue['user']['login'],
-        "projects": settings.ASANA_PROJECT_GID # Project GID
-    }
+            "workspace": settings.ASANA_WORKSPACE_GID,  # Workspace GID, https://app.asana.com/api/1.0/workspaces
+            "name": issue['title'],
+            "notes": f"Issue Description: {issue['body']}\nTask ID(Issue URL): {issue['html_url']}",
+            "assignee": "me",   # Can only be email, GID or me
+            # "assignee": issue['user']['login'],
+            "projects": settings.ASANA_PROJECT_GID, # Project GID
+        }
     }
 
     response = requests.post(url, headers=headers, json=data)
