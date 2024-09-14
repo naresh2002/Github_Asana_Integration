@@ -40,12 +40,12 @@ The service listens for new issue events in GitHub via webhooks and creates task
     ASANA_PERSONAL_ACCESS_TOKEN={ASANA_PERSONAL_ACCESS_TOKEN}
     ASANA_WORKSPACE_GID={ASANA_WORKSPACE_GID}
     ASANA_PROJECT_GID={ASANA_PROJECT_GID}
-    GITHUB_WEBHOOK_SECRET=12345678
+    GITHUB_WEBHOOK_SECRET={GITHUB_WEBHOOK_SECRET}
     ```
     Get ASANA_PERSONAL_ACCESS_TOKEN as described in Step 3 below.  
     Get ASANA_WORKSPACE_GID from https://app.asana.com/api/1.0/workspaces.  
     Get ASANA_PROJECT_GID from asana tasks URL i.e. https://app.asana.com/0/{PROJECT_GID}/{TASK_GID}, the project GID is the first set of numbers after /0/.  
-    Use GITHUB_WEBHOOK_SECRET as 12345678 for Github Webhook for this repository.  
+    Get GITHUB_WEBHOOK_SECRET as from Step 4 below.  
 
 3. These environment variables will be used to authenticate and manage the Asana API requests and validate GitHub webhook events.
 
